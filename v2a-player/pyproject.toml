@@ -1,0 +1,26 @@
+[project]
+name = "v2a-player"
+version = "0.1.0"
+description = "Player for V2A video format"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "pygame",
+    "rich",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+    "mypy",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+v2a-player = "v2a_player.cli:main"
